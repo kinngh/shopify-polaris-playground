@@ -46,7 +46,10 @@ const Index = () => {
         primaryFooterAction={{
           content: "Repository",
           onAction: () => {
-            window.open("https://google.com", "_blank");
+            window.open(
+              "https://github.com/kinngh/shopify-express-mongodb-app",
+              "_blank"
+            );
           },
         }}
         secondaryFooterActions={[

@@ -6,20 +6,10 @@
 import React, { useState, useCallback } from "react";
 import { useRoutes } from "hookrouter";
 import routes from "./GlobalRoutes";
-import {
-  AppProvider as PolarisProvider,
-  TextStyle,
-  TopBar,
-} from "@shopify/polaris";
+import { AppProvider as PolarisProvider, TopBar } from "@shopify/polaris";
 import translations from "@shopify/polaris/locales/en.json";
 import "@shopify/polaris/build/esm/styles.css";
-import {
-  Frame,
-  Navigation,
-  ActionList,
-  TextContainer,
-  Heading,
-} from "@shopify/polaris";
+import { Frame, Navigation, ActionList } from "@shopify/polaris";
 import {
   HomeMinor,
   OrdersMinor,
@@ -185,7 +175,6 @@ const App = () => {
     <PolarisProvider i18n={translations}>
       <Frame navigation={AppNavigation} topBar={topBarMarkup} logo={logo}>
         <AppData />
-
         {RouteDOM}
       </Frame>
     </PolarisProvider>
