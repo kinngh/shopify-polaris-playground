@@ -133,48 +133,9 @@ const App = () => {
     </Navigation>
   );
 
-  const AppData = () => {
-    return (
-      <div style={{ borderBottom: "1px solid #C9CCCF" }}>
-        <img
-          src="/src/assets/shopify-icon.svg"
-          width="4%"
-          style={{
-            padding: "10px",
-            display: "inline-block",
-            verticalAlign: "middle",
-            textAlign: "center",
-          }}
-        />
-        <h1
-          style={{
-            display: "inline-block",
-            verticalAlign: "middle",
-            textAlign: "center",
-          }}
-        >
-          Polaris Playground
-        </h1>
-        <p
-          style={{
-            display: "inline-block",
-            verticalAlign: "middle",
-            textAlign: "center",
-            float: "right",
-            paddingRight: "10px",
-            paddingTop: "15px",
-            color: "#6d7175",
-          }}
-        >
-          by Company Name
-        </p>
-      </div>
-    );
-  };
   return (
     <PolarisProvider i18n={translations}>
       <Frame navigation={AppNavigation} topBar={topBarMarkup} logo={logo}>
-        <AppData />
         {RouteDOM}
       </Frame>
     </PolarisProvider>
