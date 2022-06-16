@@ -1,6 +1,6 @@
 import React from "react";
 import { Page, Card } from "@shopify/polaris";
-import { navigate } from "hookrouter";
+import { navigate } from "raviger";
 
 const Page2 = () => {
   return (

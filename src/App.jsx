@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useCallback } from "react";
-import { useRoutes } from "hookrouter";
+import { useRoutes } from "raviger";
 import routes from "./GlobalRoutes";
 import { AppProvider as PolarisProvider, TopBar } from "@shopify/polaris";
 import translations from "@shopify/polaris/locales/en.json";

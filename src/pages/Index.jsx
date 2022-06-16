@@ -1,6 +1,6 @@
 import React from "react";
 import { Page, Card, DataTable, Link } from "@shopify/polaris";
-import { navigate } from "hookrouter";
+import { navigate } from "raviger";
 
 const Index = () => {
   const rows = [
@@ -18,24 +18,13 @@ const Index = () => {
     [
       <Link
         removeUnderline
-        url="https://github.com/kinngh/shopify-express-mongodb-app"
+        url="https://github.com/kinngh/shopify-node-express-mongodb-app"
         key="express-react"
       >
         Express x React
       </Link>,
       "Harshdeep Singh Hura",
-      "https://github.com/kinngh/shopify-express-mongodb-app",
-    ],
-    [
-      <Link
-        removeUnderline
-        url="https://github.com/kinngh/shopify-node-mongodb-next-app"
-        key="koa-nextjs"
-      >
-        Koa x Next
-      </Link>,
-      "Harshdeep Singh Hura",
-      "https://github.com/kinngh/shopify-node-mongodb-next-app",
+      "https://github.com/kinngh/shopify-node-express-mongodb-app",
     ],
   ];
   return (
@@ -47,7 +36,7 @@ const Index = () => {
           content: "Repository",
           onAction: () => {
             window.open(
-              "https://github.com/kinngh/shopify-express-mongodb-app",
+              "https://github.com/kinngh/shopify-node-express-mongodb-app",
               "_blank"
             );
           },
