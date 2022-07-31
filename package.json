@@ -2,6 +2,11 @@
   "name": "polaris-builder",
   "private": true,
   "version": "0.0.1",
+  "description": "Polaris Playgroun written with React and Vite to make it easier for devs and designers prototype an embedded app",
+  "author": {
+    "name": "Harshdeep Singh Hura",
+    "url": "https://harshdeephura.com"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,13 +15,13 @@
     "update": "ncu -u"
   },
   "dependencies": {
-    "@shopify/polaris": "^9.17.0",
-    "@vitejs/plugin-react": "^1.3.2",
-    "npm-check-updates": "^14.0.1",
+    "@shopify/polaris": "^9.22.0",
+    "@vitejs/plugin-react": "^2.0.0",
+    "npm-check-updates": "^16.0.4",
     "prettier": "^2.7.1",
     "raviger": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "vite": "^2.9.12"
+    "vite": "^3.0.4"
   }
 }
