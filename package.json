@@ -15,13 +15,13 @@
     "update": "ncu -u"
   },
   "dependencies": {
-    "@shopify/polaris": "^9.22.0",
-    "@vitejs/plugin-react": "^2.0.0",
-    "npm-check-updates": "^16.0.4",
+    "@shopify/polaris": "^10.0.0",
+    "@vitejs/plugin-react": "^2.0.1",
+    "npm-check-updates": "^16.0.5",
     "prettier": "^2.7.1",
     "raviger": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "vite": "^3.0.4"
+    "vite": "^3.0.9"
   }
 }
