@@ -7,17 +7,20 @@ import {
   ActionList,
   AppProvider as PolarisProvider,
   Frame,
+  Icon,
   Navigation,
   TopBar,
 } from "@shopify/polaris";
 import {
   AnalyticsMinor,
   AppsMinor,
-  CirclePlusMinor,
+  ChevronRightMinor,
+  ContentMinor,
   CustomersMinor,
   DiscountsMinor,
   HomeMinor,
   MarketingMinor,
+  NotificationMajor,
   OrdersMinor,
   ProductsMinor,
   StoreMinor,
@@ -54,7 +57,14 @@ const App = () => {
   };
 
   const userMenuMarkup = (
-    <TopBar.UserMenu name="Kinngh" detail="Polaris Test" initials="K" />
+    <>
+      {/* It's not stupid if it works */}
+      <div>
+        <Icon source={NotificationMajor} color="base" />
+      </div>
+      <div style={{ marginLeft: "10px" }} />
+      <TopBar.UserMenu name="Kinngh" detail="Playground Test" initials="K" />
+    </>
   );
 
   const searchResultsMarkup = <ActionList />;
@@ -102,6 +112,10 @@ const App = () => {
             icon: CustomersMinor,
           },
           {
+            label: "Content",
+            icon: ContentMinor,
+          },
+          {
             label: "Analytics",
             icon: AnalyticsMinor,
           },
@@ -113,15 +127,9 @@ const App = () => {
             label: "Discounts",
             icon: DiscountsMinor,
           },
-          {
-            url: "/",
-            label: "Apps",
-            icon: AppsMinor,
-          },
         ]}
       />
       <Navigation.Section
-        separator
         title="Sales channels"
         items={[
           {
@@ -130,7 +138,22 @@ const App = () => {
           },
         ]}
         action={{
-          icon: CirclePlusMinor,
+          icon: ChevronRightMinor,
+          accessibilityLabel: "Add",
+          onClick: () => {},
+        }}
+      />
+      <Navigation.Section
+        title="Apps"
+        items={[
+          {
+            label: "App Name",
+            icon: AppsMinor,
+            selected: true,
+          },
+        ]}
+        action={{
+          icon: ChevronRightMinor,
           accessibilityLabel: "Add",
           onClick: () => {},
         }}
