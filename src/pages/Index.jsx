@@ -1,6 +1,6 @@
-import React from "react";
-import { Page, Card, DataTable, Link } from "@shopify/polaris";
+import { Card, DataTable, Link, Page } from "@shopify/polaris";
 import { navigate } from "raviger";
+import React from "react";
 
 const Index = () => {
   const rows = [

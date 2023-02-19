@@ -3,25 +3,30 @@
  * If drag/dropping to a repo, avoid overwriting App.jsx
  */
 
-import React, { useState, useCallback } from "react";
-import { useRoutes } from "raviger";
-import routes from "./GlobalRoutes";
-import { AppProvider as PolarisProvider, TopBar } from "@shopify/polaris";
-import translations from "@shopify/polaris/locales/en.json";
-import "@shopify/polaris/build/esm/styles.css";
-import { Frame, Navigation, ActionList } from "@shopify/polaris";
 import {
+  ActionList,
+  AppProvider as PolarisProvider,
+  Frame,
+  Navigation,
+  TopBar,
+} from "@shopify/polaris";
+import {
+  AnalyticsMinor,
+  AppsMinor,
+  CirclePlusMinor,
+  CustomersMinor,
+  DiscountsMinor,
   HomeMinor,
+  MarketingMinor,
   OrdersMinor,
   ProductsMinor,
-  CustomersMinor,
-  AnalyticsMinor,
-  MarketingMinor,
-  DiscountsMinor,
-  AppsMinor,
   StoreMinor,
-  CirclePlusMinor,
 } from "@shopify/polaris-icons";
+import "@shopify/polaris/build/esm/styles.css";
+import translations from "@shopify/polaris/locales/en.json";
+import { useRoutes } from "raviger";
+import React, { useCallback, useState } from "react";
+import routes from "./GlobalRoutes";
 
 const App = () => {
   const RouteDOM = useRoutes(routes);

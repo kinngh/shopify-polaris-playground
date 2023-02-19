@@ -1,6 +1,6 @@
-import React from "react";
-import { Page, Card } from "@shopify/polaris";
+import { Card, Page } from "@shopify/polaris";
 import { navigate } from "raviger";
+import React from "react";
 
 const Page2 = () => {
   return (
