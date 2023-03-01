@@ -1,8 +1,3 @@
-/**
- * IMPORTANT
- * If drag/dropping to a repo, avoid overwriting App.jsx
- */
-
 import {
   ActionList,
   AppProvider as PolarisProvider,
@@ -27,12 +22,9 @@ import {
 } from "@shopify/polaris-icons";
 import "@shopify/polaris/build/esm/styles.css";
 import translations from "@shopify/polaris/locales/en.json";
-import { useRoutes } from "raviger";
 import React, { useCallback, useState } from "react";
-import routes from "./GlobalRoutes";
 
-const App = () => {
-  const RouteDOM = useRoutes(routes);
+export default function App({ Component, pageProps }) {
   const [isSearchActive, setIsSearchActive] = useState(false);
   const [searchValue, setSearchValue] = useState("");
 
@@ -147,7 +139,7 @@ const App = () => {
         title="Apps"
         items={[
           {
-            label: "App Name",
+            label: "Polaris Playground",
             icon: AppsMinor,
             selected: true,
           },
@@ -160,13 +152,15 @@ const App = () => {
       />
     </Navigation>
   );
-
   return (
-    <PolarisProvider i18n={translations}>
-      <Frame navigation={AppNavigation} topBar={topBarMarkup} logo={logo}>
-        {RouteDOM}
-      </Frame>
-    </PolarisProvider>
+    <>
+      <PolarisProvider i18n={translations}>
+        <Frame navigation={AppNavigation} topBar={topBarMarkup} logo={logo}>
+          <div style={{ paddingBottom: "35px" }} />
+          <hr style={{ border: "0.8px solid #E1E3E5" }} />
+          <Component {...pageProps} />
+        </Frame>
+      </PolarisProvider>
+    </>
   );
-};
-export default App;
+}
