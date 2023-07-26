@@ -156,9 +156,11 @@ export default function App({ Component, pageProps }) {
     <>
       <PolarisProvider
         i18n={translations}
-        features={{
-          // polarisSummerEditions2023: true,
-        }}
+        features={
+          {
+            // polarisSummerEditions2023: true,
+          }
+        }
       >
         <Frame navigation={AppNavigation} topBar={topBarMarkup} logo={logo}>
           <div style={{ paddingBottom: "35px" }} />
