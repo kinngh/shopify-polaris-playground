@@ -1,9 +1,9 @@
 import {
   ActionList,
-  AppProvider as PolarisProvider,
   Frame,
   Icon,
   Navigation,
+  AppProvider as PolarisProvider,
   TopBar,
 } from "@shopify/polaris";
 import {
@@ -22,7 +22,7 @@ import {
 } from "@shopify/polaris-icons";
 import "@shopify/polaris/build/esm/styles.css";
 import translations from "@shopify/polaris/locales/en.json";
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 
 export default function App({ Component, pageProps }) {
   const [isSearchActive, setIsSearchActive] = useState(false);
@@ -154,7 +154,12 @@ export default function App({ Component, pageProps }) {
   );
   return (
     <>
-      <PolarisProvider i18n={translations}>
+      <PolarisProvider
+        i18n={translations}
+        features={{
+          // polarisSummerEditions2023: true,
+        }}
+      >
         <Frame navigation={AppNavigation} topBar={topBarMarkup} logo={logo}>
           <div style={{ paddingBottom: "35px" }} />
           <hr style={{ border: "0.8px solid #E1E3E5" }} />
