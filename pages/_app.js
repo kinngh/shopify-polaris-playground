@@ -50,11 +50,15 @@ export default function App({ Component, pageProps }) {
 
   const userMenuMarkup = (
     <>
-      {/* It's not stupid if it works */}
-      <div>
-        <Icon source={NotificationMajor} color="base" />
-      </div>
+
       <div style={{ marginLeft: "10px" }} />
+      <TopBar.Menu
+        activatorContent={
+          <>
+            <Icon source={NotificationMajor} color="subdued" />
+          </>
+        }
+      ></TopBar.Menu>
       <TopBar.UserMenu name="Kinngh" detail="Playground Test" initials="K" />
     </>
   );
