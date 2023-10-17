@@ -6,6 +6,7 @@
 # dependencies
 package-lock.json
 /node_modules
+bun.lockb
 /.pnp
 .pnp.js
 

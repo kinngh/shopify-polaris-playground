@@ -13,6 +13,7 @@ import {
   ContentMinor,
   CustomersMinor,
   DiscountsMinor,
+  FinancesMinor,
   HomeMinor,
   MarketingMinor,
   NotificationMajor,
@@ -50,12 +51,11 @@ export default function App({ Component, pageProps }) {
 
   const userMenuMarkup = (
     <>
-
       <div style={{ marginLeft: "10px" }} />
       <TopBar.Menu
         activatorContent={
           <>
-            <Icon source={NotificationMajor} color="subdued" />
+            <Icon source={NotificationMajor} />
           </>
         }
       ></TopBar.Menu>
@@ -112,6 +112,10 @@ export default function App({ Component, pageProps }) {
             icon: ContentMinor,
           },
           {
+            label: "Finances",
+            icon: FinancesMinor,
+          },
+          {
             label: "Analytics",
             icon: AnalyticsMinor,
           },
@@ -158,14 +162,7 @@ export default function App({ Component, pageProps }) {
   );
   return (
     <>
-      <PolarisProvider
-        i18n={translations}
-        features={
-          {
-            // polarisSummerEditions2023: true,
-          }
-        }
-      >
+      <PolarisProvider i18n={translations}>
         <Frame navigation={AppNavigation} topBar={topBarMarkup} logo={logo}>
           <div style={{ paddingBottom: "35px" }} />
           <hr style={{ border: "0.8px solid #E1E3E5" }} />
