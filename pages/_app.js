@@ -7,19 +7,19 @@ import {
   TopBar,
 } from "@shopify/polaris";
 import {
-  AnalyticsMinor,
-  AppsMinor,
-  ChevronRightMinor,
-  ContentMinor,
-  CustomersMinor,
-  DiscountsMinor,
-  FinancesMinor,
-  HomeMinor,
-  MarketingMinor,
-  NotificationMajor,
-  OrdersMinor,
-  ProductsMinor,
-  StoreMinor,
+  ChartVerticalIcon,
+  AppsIcon,
+  ChevronRightIcon,
+  ContentIcon,
+  PersonIcon,
+  DiscountIcon,
+  BankIcon,
+  HomeIcon,
+  TargetIcon,
+  NotificationIcon,
+  OrderIcon,
+  ProductIcon,
+  StoreIcon,
 } from "@shopify/polaris-icons";
 import "@shopify/polaris/build/esm/styles.css";
 import translations from "@shopify/polaris/locales/en.json";
@@ -55,7 +55,7 @@ export default function App({ Component, pageProps }) {
       <TopBar.Menu
         activatorContent={
           <>
-            <Icon source={NotificationMajor} />
+            <Icon source={NotificationIcon} />
           </>
         }
       ></TopBar.Menu>
@@ -92,40 +92,40 @@ export default function App({ Component, pageProps }) {
         items={[
           {
             label: "Home",
-            icon: HomeMinor,
+            icon: HomeIcon,
           },
           {
             label: "Orders",
-            icon: OrdersMinor,
+            icon: OrderIcon,
             badge: "10",
           },
           {
             label: "Products",
-            icon: ProductsMinor,
+            icon: ProductIcon,
           },
           {
             label: "Customers",
-            icon: CustomersMinor,
+            icon: PersonIcon,
           },
           {
             label: "Content",
-            icon: ContentMinor,
+            icon: ContentIcon,
           },
           {
             label: "Finances",
-            icon: FinancesMinor,
+            icon: BankIcon,
           },
           {
             label: "Analytics",
-            icon: AnalyticsMinor,
+            icon: ChartVerticalIcon,
           },
           {
             label: "Marketing",
-            icon: MarketingMinor,
+            icon: TargetIcon,
           },
           {
             label: "Discounts",
-            icon: DiscountsMinor,
+            icon: DiscountIcon,
           },
         ]}
       />
@@ -134,11 +134,11 @@ export default function App({ Component, pageProps }) {
         items={[
           {
             label: "Online Store",
-            icon: StoreMinor,
+            icon: StoreIcon,
           },
         ]}
         action={{
-          icon: ChevronRightMinor,
+          icon: ChevronRightIcon,
           accessibilityLabel: "Add",
           onClick: () => {},
         }}
@@ -148,12 +148,12 @@ export default function App({ Component, pageProps }) {
         items={[
           {
             label: "Polaris Playground",
-            icon: AppsMinor,
+            icon: AppsIcon,
             selected: true,
           },
         ]}
         action={{
-          icon: ChevronRightMinor,
+          icon: ChevronRightIcon,
           accessibilityLabel: "Add",
           onClick: () => {},
         }}
