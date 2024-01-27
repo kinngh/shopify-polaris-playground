@@ -11,13 +11,13 @@
     "update": "ncu -u"
   },
   "dependencies": {
-    "@shopify/polaris": "^12.10.0",
+    "@shopify/polaris": "^12.11.1",
     "next": "14.1.0",
     "prettier": "^3.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "npm-check-updates": "^16.14.12"
+    "npm-check-updates": "^16.14.14"
   }
 }
