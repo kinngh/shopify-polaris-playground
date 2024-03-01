@@ -7,15 +7,11 @@ import {
   Page,
   Text,
 } from "@shopify/polaris";
-import isShopAvailable from "@/utils/middleware/isShopAvailable";
+import isInitialLoad from "@/utils/middleware/isInitialLoad";
 
 //On first install, check if the store is installed and redirect accordingly
 export async function getServerSideProps(context) {
-  //If you're a designer, just know that if you delete this function all hell
-  // will break loose and they're gonna then have to call me
-  // to tell them they're forgetting this and I'm gonna charge
-  // $500 to fix it.
-  return await isShopAvailable(context);
+  return await isInitialLoad(context);
 }
 
 const Index = () => {
