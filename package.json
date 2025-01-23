@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "@shopify/polaris": "^13.9.2",
-    "next": "15.1.4",
+    "next": "15.1.6",
     "prettier": "^3.4.2",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },
   "devDependencies": {
-    "npm-check-updates": "^17.1.13"
+    "npm-check-updates": "^17.1.14"
   }
 }
