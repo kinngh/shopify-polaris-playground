@@ -1,25 +1,32 @@
 import {
   ActionList,
+  Badge,
+  Box,
+  Divider,
   Frame,
   Icon,
+  InlineStack,
   Navigation,
   AppProvider as PolarisProvider,
+  Text,
   TopBar,
 } from "@shopify/polaris";
 import {
-  ChartVerticalIcon,
-  AppsIcon,
+  AppsFilledIcon,
+  BankFilledIcon,
+  ChartVerticalFilledIcon,
   ChevronRightIcon,
-  ContentIcon,
-  PersonIcon,
-  DiscountIcon,
-  BankIcon,
-  HomeIcon,
-  TargetIcon,
+  ContentFilledIcon,
+  DiscountFilledIcon,
+  HomeFilledIcon,
+  MenuHorizontalIcon,
   NotificationIcon,
-  OrderIcon,
-  ProductIcon,
-  StoreIcon,
+  OrderFilledIcon,
+  PersonFilledIcon,
+  PinFilledIcon,
+  ProductFilledIcon,
+  StoreFilledIcon,
+  TargetFilledIcon,
 } from "@shopify/polaris-icons";
 import "@shopify/polaris/build/esm/styles.css";
 import translations from "@shopify/polaris/locales/en.json";
@@ -44,8 +51,9 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   const logo = {
-    width: 35,
-    topBarSource: "https://www.vectorlogo.zone/logos/shopify/shopify-icon.svg",
+    width: 20,
+    topBarSource:
+      "https://cdn.shopify.com/shopifycloud/web/assets/v1/vite/client/en/assets/shopify-glyph-white-DZNyE9BvHIk-.svg",
     accessibilityLabel: "Test Store",
   };
 
@@ -91,50 +99,50 @@ export default function App({ Component, pageProps }) {
       <Navigation.Section
         items={[
           {
-            label: "Home",
-            icon: HomeIcon,
+            label: <Text>Home</Text>,
+            icon: HomeFilledIcon,
           },
           {
-            label: "Orders",
-            icon: OrderIcon,
-            badge: "10",
+            label: <Text>Orders</Text>,
+            icon: OrderFilledIcon,
+            badge: <Badge>8</Badge>,
           },
           {
-            label: "Products",
-            icon: ProductIcon,
+            label: <Text>Products</Text>,
+            icon: ProductFilledIcon,
           },
           {
-            label: "Customers",
-            icon: PersonIcon,
+            label: <Text>Customers</Text>,
+            icon: PersonFilledIcon,
           },
           {
-            label: "Content",
-            icon: ContentIcon,
+            label: <Text>Content</Text>,
+            icon: ContentFilledIcon,
           },
           {
-            label: "Finances",
-            icon: BankIcon,
+            label: <Text>Finances</Text>,
+            icon: BankFilledIcon,
           },
           {
-            label: "Analytics",
-            icon: ChartVerticalIcon,
+            label: <Text>Analytics</Text>,
+            icon: ChartVerticalFilledIcon,
           },
           {
-            label: "Marketing",
-            icon: TargetIcon,
+            label: <Text>Marketing</Text>,
+            icon: TargetFilledIcon,
           },
           {
-            label: "Discounts",
-            icon: DiscountIcon,
+            label: <Text>Discounts</Text>,
+            icon: DiscountFilledIcon,
           },
         ]}
       />
       <Navigation.Section
-        title="Sales channels"
+        title={<Text fontWeight="bold">Sales Channels</Text>}
         items={[
           {
-            label: "Online Store",
-            icon: StoreIcon,
+            label: <Text>Online Store</Text>,
+            icon: StoreFilledIcon,
           },
         ]}
         action={{
@@ -144,11 +152,11 @@ export default function App({ Component, pageProps }) {
         }}
       />
       <Navigation.Section
-        title="Apps"
+        title={<Text fontWeight="bold">Apps</Text>}
         items={[
           {
-            label: "Polaris Playground",
-            icon: AppsIcon,
+            label: <Text>Playground</Text>,
+            icon: AppsFilledIcon,
             selected: true,
           },
         ]}
@@ -164,8 +172,27 @@ export default function App({ Component, pageProps }) {
     <>
       <PolarisProvider i18n={translations}>
         <Frame navigation={AppNavigation} topBar={topBarMarkup} logo={logo}>
-          <div style={{ paddingBottom: "35px" }} />
-          <hr style={{ border: "0.8px solid #E1E3E5" }} />
+          <div>
+            <Box paddingBlock="300">
+              <InlineStack align="space-between" blockAlign="center" gap="100">
+                <InlineStack align="start" blockAlign="center" gap="100">
+                  <div>
+                    <Icon source={AppsFilledIcon} tone="magic" />
+                  </div>
+                  <Text variant="bodyLg">Playground</Text>
+                </InlineStack>
+                <InlineStack align="end" blockAlign="center" gap="100">
+                  <div>
+                    <Icon source={PinFilledIcon} />
+                  </div>
+                  <div>
+                    <Icon source={MenuHorizontalIcon} />
+                  </div>
+                </InlineStack>
+              </InlineStack>
+            </Box>
+          </div>
+          <Divider />
           <Component {...pageProps} />
         </Frame>
       </PolarisProvider>
