@@ -3,6 +3,6 @@
     "paths": {
       "@/*": ["./*"]
     },
-    "types": ["@shopify/app-bridge-ui-types"]
+    "types": ["@shopify/polaris-types"]
   }
 }
