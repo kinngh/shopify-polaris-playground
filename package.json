@@ -1,6 +1,6 @@
 {
   "name": "polaris-playground",
-  "version": "2026.05.09",
+  "version": "2026.07.11",
   "type": "module",
   "scripts": {
     "dev": "next dev",
@@ -11,13 +11,13 @@
   },
   "dependencies": {
     "@shopify/polaris": "^13.9.5",
-    "next": "16.2.6",
-    "prettier": "^3.8.3",
-    "react": "19.2.6",
-    "react-dom": "19.2.6"
+    "next": "16.2.10",
+    "prettier": "^3.9.5",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
   },
   "devDependencies": {
     "@shopify/polaris-types": "^1.0.7",
-    "npm-check-updates": "^22.1.1"
+    "npm-check-updates": "^22.2.9"
   }
 }
