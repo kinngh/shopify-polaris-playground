@@ -4,7 +4,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <script src="https://cdn.shopify.com/shopifycloud/polaris.js"></script>
+        <link rel="icon" href="/shopify-glyph.svg" type="image/svg+xml" />
+        <script src="https://cdn.shopify.com/shopifycloud/polaris-2.js"></script>
       </Head>
       <body>
         <Main />
